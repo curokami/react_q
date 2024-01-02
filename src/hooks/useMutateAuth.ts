@@ -9,10 +9,10 @@ import { User } from '../types/types';
 export const useMutateAuth = () => {
   const history = useHistory();
   const dispatch = useAppDispatch();
-  console.log('${process.env.REACT_APP_API_URL}/login')
+ 
   const loginMutation = useMutation(
     async (user: User) => await axios.post(`${process.env.REACT_APP_API_URL}/login`, user, {
-      withCredentials: true
+      withCredentials: true,
     }),
 
     {

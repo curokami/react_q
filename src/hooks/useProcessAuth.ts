@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useQueryClient } from 'react-query'
-import { useMutateAuth } from './useMutateAuth.1'
+import { useMutateAuth } from '../hooks/useMutateAuth'
 
 
 

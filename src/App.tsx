@@ -7,6 +7,7 @@ import { selectCsrfState } from './slices/appSlice'
 import { Todo } from './components/Todo'
 import { Auth } from './components/Auth'
 
+
 function App() {
   const csrf = useAppSelector(selectCsrfState)
   useEffect(() =>{

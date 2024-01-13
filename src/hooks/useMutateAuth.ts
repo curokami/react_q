@@ -22,11 +22,11 @@ export const useMutateAuth = () => {
       onError: (err: any) => {
         alert(`${err.response.data.detail}\n${err.message}`);
         if (err.response.data.detail === 'The CSRF token has expired.') {
-          dispatch(toggleCsrfState());
+          dispatch(toggleCsrfState())
         }
       },
     }
-  );
+  )
   const registerMutation = useMutation(
     async (user: User) => await axios.post(`${process.env.REACT_APP_API_URL}/register`, user),
   

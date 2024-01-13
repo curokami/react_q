@@ -7,19 +7,17 @@ import { selectCsrfState } from './slices/appSlice'
 import { Todo } from './components/Todo'
 import { Auth } from './components/Auth'
 
-
 function App() {
   const csrf = useAppSelector(selectCsrfState)
   useEffect(() =>{
-    
-     const getCsrfToken = async () => {
+      const getCsrfToken = async () => {
       const res = await axios.get<CsrfToken>(
         `${process.env.REACT_APP_API_URL}/csrftoken`
       )
       axios.defaults.headers.common['X-CSRF-Token'] = res.data.csrf_token
     }
     getCsrfToken()
-    }   ,[csrf])
+    } ,[csrf])
   return ( 
    <BrowserRouter>
       <Switch>

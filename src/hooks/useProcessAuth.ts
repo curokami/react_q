@@ -18,8 +18,7 @@ export const useProcessAuth = () => {
 			 if (isLogin) {
 				loginMutation.mutate({
 					email: email,
-				  password: pw,
-
+					password: pw,
 				})
 			 }else{
 				await registerMutation

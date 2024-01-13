@@ -20,14 +20,14 @@ export const appSlice=createSlice({
   reducers:{
 		 setEditedTask: (state, action: PayloadAction<Task>) => {
       state.editedTask = action.payload
-	},
+	 },
   resetEditedTask: (state) => {
       state.editedTask = initialState.editedTask
-    },
-	   toggleCsrfState: (state) => {
+   },
+	toggleCsrfState: (state) => {
       state.csrfTokenExp = !state.csrfTokenExp
-    },
-	},
+   },
+ },
 
 })
 
